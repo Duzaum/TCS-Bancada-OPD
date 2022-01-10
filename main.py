@@ -41,7 +41,7 @@ class SettingsWindow(baseSettings, formSettings):
         else:
             self.boxPort.setCurrentIndex(0)
 
-        if self.setting_variables.value("baund")>0:
+        if self.setting_variables.value("baund"):
             self.boxBaund.setCurrentIndex(int(self.setting_variables.value("baund")))
         else:
             self.boxBaund.setCurrentIndex(0)
@@ -63,7 +63,7 @@ class SettingsWindow(baseSettings, formSettings):
         #load settings
         self.txtLogPath.setText(self.setting_variables.value("log"))
         self.txtBSCpath.setText(self.setting_variables.value("bsc"))
-        if (self.setting_variables.value("comport"))>0:
+        if (self.setting_variables.value("comport")):
             self.boxPort.setCurrentIndex(int(self.setting_variables.value("comport")))
         else:
             self.boxPort.setCurrentIndex(0)
